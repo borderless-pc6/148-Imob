@@ -1,7 +1,10 @@
 import styles from "../styles/testimonials.module.css"
+import Image from "next/image"
+
 import Roberto from '@/app/assets/images/pictures/RobertoMendes.jpg'
 import Carlos from '@/app/assets/images/pictures/CarlosSilva.jpg'
 import Mariana from '@/app/assets/images/pictures/MarianaCosta.jpg'
+
 
 const Testimonials = () => {
     const testimonials = [
@@ -35,11 +38,18 @@ const Testimonials = () => {
                 {testimonials.map((testimonial) => (
                     <div key={testimonial.id} className={styles["testimonial-card"]}>
                         <div className={styles["testimonial-content"]}>
-                            <p>"{testimonial.text}"</p>
+                            <p>&ldquo;{testimonial.text}&rdquo;</p>
                         </div>
                         <div className={styles["testimonial-author"]}>
                             <div className={styles["author-image"]}>
-                                <img src={testimonial.image || "/placeholder.svg"} alt={testimonial.name} />
+                                <Image
+                                    src={testimonial.image || "/placeholder.svg"}
+                                    alt={testimonial.name}
+                                    width={64}
+                                    height={64}
+                                    className={styles["author-image"]}
+                                />
+
                             </div>
                             <div className={styles["author-info"]}>
                                 <h4>{testimonial.name}</h4>

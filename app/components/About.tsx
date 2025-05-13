@@ -1,4 +1,6 @@
 import styles from '../styles/about.module.css'
+import Image from 'next/image'
+
 import Roberto from '../assets/images/logo.png'
 
 const About = () => {
@@ -22,7 +24,12 @@ const About = () => {
                 <button className={styles.secondaryButton}>Conheça Nossa História</button>
             </div>
             <div className={styles.aboutImage}>
-                <img src={Roberto.src} alt="Casa de luxo para alugar" />
+                <Image
+                    src={Roberto}
+                    alt="Casa de luxo para alugar"
+                    width={400} // ajuste conforme o tamanho ideal da imagem
+                    height={300} // ajuste conforme necessário
+                />
             </div>
         </section>
     )

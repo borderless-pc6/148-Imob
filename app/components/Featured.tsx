@@ -1,4 +1,6 @@
 import styles from "@/app/styles/featured.module.css";
+import Image from "next/image"
+
 import HomeBeach from '@/app/assets/images/BeachHome.jpg'
 import ApCenter from '@/app/assets/images/ApartamentoImage.jpg'
 import Chale4 from '@/app/assets/images/Chale4.jpg'
@@ -11,28 +13,28 @@ const Featured = () => {
             name: "Casa na Praia - 3 Quartos",
             price: "R$ 3.500/mês",
             location: "Florianópolis, SC",
-            image: HomeBeach.src,
+            image: HomeBeach,
         },
         {
             id: 2,
             name: "Apartamento no Centro - 2 Quartos",
             price: "R$ 2.200/mês",
             location: "São Paulo, SP",
-            image: ApCenter.src,
+            image: ApCenter,
         },
         {
             id: 3,
             name: "Chalé na Montanha - 4 Quartos",
             price: "R$ 4.800/mês",
             location: "Campos do Jordão, SP",
-            image: Chale4.src,
+            image: Chale4,
         },
         {
             id: 4,
             name: "Cobertura Duplex - 3 Quartos",
             price: "R$ 5.900/mês",
             location: "Rio de Janeiro, RJ",
-            image: Duplex.src,
+            image: Duplex,
         },
     ]
 
@@ -43,7 +45,14 @@ const Featured = () => {
                 {properties.map((property) => (
                     <div key={property.id} className={styles["product-card"]}>
                         <div className={styles["product-image"]}>
-                            <img src={property.image || "/placeholder.svg"} alt={property.name} />
+                            <Image
+                                src={property.image}
+                                alt={property.name}
+                                width={500}
+                                height={300}
+                                style={{ width: '100%', height: 'auto' }}
+                                placeholder="blur"
+                            />
                             <div className={styles["product-actions"]}>
                                 <button className={styles["icon-action"]}>
                                     <svg
