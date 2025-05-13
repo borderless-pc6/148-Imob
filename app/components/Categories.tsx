@@ -1,8 +1,8 @@
-import styles from '@/app/styles/categories.module.css';
-import HomeImage1 from '@/app/assets/images/HomeImage-1.jpg';
-import ImagemApartamento1 from '@/app/assets/images/imagemApartamento-1.jpg'
-import ChaleImage1 from '@/app/assets/images/ChaleImage-1.jpg'
-import CoberturaImage1 from '@/app/assets/images/CoberturaImage-1.jpg'
+import styles from '../../app/styles/categories.module.css';
+import HomeImage1 from '../../app/assets/images/HomeImage-1.jpg';
+import ImagemApartamento1 from '../../app/assets/images/imagemApartamento-1.jpg';
+import ChaleImage1 from '../../app/assets/images/ChaleImage-1.jpg';
+import CoberturaImage1 from '../../app/assets/images/CoberturaImage-1.jpg';
 
 const Categories = () => {
     const categories = [
