@@ -1,0 +1,108 @@
+.about {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 6rem 2rem;
+}
+
+.aboutContent {
+  flex: 1;
+  padding-right: 4rem;
+}
+
+.aboutContent h2 {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.aboutContent h2::after {
+  left: 0;
+  transform: none;
+}
+
+.aboutContent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.aboutImage {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilo para o botão */
+.secondaryButton {
+  background-color: transparent;
+  color: #8b5a2b;
+  /* Valor fixo em vez de var() */
+  border: 2px solid #8b5a2b;
+  /* Valor fixo em vez de var() */
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background-color: #8b5a2b;
+  /* Valor fixo em vez de var() */
+  color: white;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .aboutContent {
+    padding-right: 0;
+    text-align: center;
+    /* Centraliza todo o texto */
+  }
+
+  .aboutContent h2 {
+    text-align: center;
+  }
+
+  .aboutContent h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Centraliza o botão */
+  .aboutContent .secondaryButton {
+    display: block;
+    margin: 0 auto;
+    /* Centraliza o botão */
+    min-width: 200px;
+    /* Largura mínima para melhor toque */
+    padding: 12px 24px;
+    /* Padding maior para área de toque maior */
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+
+  .aboutContent .secondaryButton {
+    width: 100%;
+    /* Botão ocupa toda a largura em telas muito pequenas */
+    max-width: 300px;
+    /* Limita a largura máxima */
+  }
+}
